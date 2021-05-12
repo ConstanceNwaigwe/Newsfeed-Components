@@ -114,3 +114,43 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+for (let i = 0; i < data.length; i++){
+  let div = document.createElement("div");
+  div.className = "article";
+  //let texth2 = document.createTextNode(data[0].title);
+  //div.appendChild(texth2);
+  document.getElementsByClassName("articles")[0].appendChild(div);
+
+  let h2 = document.createElement("h2");
+  let texth2 = document.createTextNode(data[i].title);
+  h2.appendChild(texth2);
+  document.getElementsByClassName("article")[i].appendChild(h2);
+
+  let pdate = document.createElement("p");
+  pdate.className = "date";
+  let textdate = document.createTextNode(data[i].date);
+  pdate.appendChild(textdate);
+  document.getElementsByClassName("article")[i].appendChild(pdate);
+
+  let fp = document.createElement("p");
+  let textfp = document.createTextNode(data[i].firstParagraph);
+  fp.appendChild(textfp);
+  document.getElementsByClassName("article")[i].appendChild(fp);
+
+  let sp = document.createElement("p");
+  let textsp = document.createTextNode(data[i].secondParagraph);
+  sp.appendChild(textsp);
+  document.getElementsByClassName("article")[i].appendChild(sp);
+
+  let tp = document.createElement("p");
+  let texttp = document.createTextNode(data[i].thirdParagraph);
+  tp.appendChild(texttp);
+  document.getElementsByClassName("article")[i].appendChild(tp);
+
+  let span = document.createElement("span");
+  span.className = "expandButton";
+  let textspan = document.createTextNode("+");
+  span.appendChild(textspan);
+  document.getElementsByClassName("article")[i].appendChild(span);
+}
